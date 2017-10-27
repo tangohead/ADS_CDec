@@ -54,7 +54,7 @@ int main() {
 //    cout << "Pos? " << msgcon.has_position << endl;
 //    cout << "Way? " << msgcon.has_waypoint << endl;
 
-    ifstream infile("/home/matt/CLionProjects/ADS-CDec/adsc_msg.txt");
+    ifstream infile("/home/matt/CLionProjects/ADS-CDec/adsc_msg2.txt");
 
     cout << infile.fail() << endl;
 
@@ -67,6 +67,7 @@ int main() {
         arincmessage.clear();
 
         decode_ADS(msg, &arincmessage, &msgcon);
+        cout << arincmessage.info.toStdString() << endl;
         total++;
         if(msgcon.has_position && !msgcon.has_waypoint) only_pos++;
         else if(!msgcon.has_position && msgcon.has_waypoint) only_way++;
