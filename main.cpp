@@ -1,3 +1,9 @@
+/************
+ *
+ * The vast majority of the code outside of main is from JAERO https://github.com/jontio/JAERO
+ * JAERO is written and maintained by Jonti Olds.
+ *
+ ************/
 #include <iostream>
 #include <string.h>
 #include <stdlib.h>
@@ -54,7 +60,7 @@ int main() {
 //    cout << "Pos? " << msgcon.has_position << endl;
 //    cout << "Way? " << msgcon.has_waypoint << endl;
 
-    ifstream infile("/home/matt/CLionProjects/ADS-CDec/adsc_msg2.txt");
+    ifstream infile("FILEPATH");
 
     cout << infile.fail() << endl;
 
